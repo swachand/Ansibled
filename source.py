@@ -1,9 +1,10 @@
 import sys
 import sqlite3
+import os
 
-final_playbook = '---' + '\n' + '- name: Ansible Playbook' + '\n- hosts: '
+final_playbook = '---' + '\n' + '- name: Ansible Playbook' + '\n  hosts: '
 hosts = input("Please enter the host string or IP: ")
-final_playbook += hosts + '\n' + '- become: yes' + '\n' + '- become_user: root' + '\n\n' + '  tasks:\n'
+final_playbook += hosts + '\n' + '  become: yes' + '\n' + '  become_user: root' + '\n\n' + '  tasks:\n'
 user_input = input("Please enter the search keyword:")
 conn = sqlite3.connect("D:\\A\\ansiblator.db")
 res = conn.execute("SELECT name,description FROM MODULES WHERE name like ?", ('%'+user_input+'%',)).fetchall()
@@ -24,4 +25,6 @@ def excepting():
         print("\nError - Please enter number within the available limit!!! \n")
         excepting()
 excepting()
+with open(os.getcwd()+"\\A\\playbook.yml", "w") as file:
+    file.write(final_playbook)
 print(final_playbook + '\n...')
