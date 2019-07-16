@@ -1,4 +1,4 @@
-<p align="center"> <img src="https://github.com/Maheshkrishna/Ansiblator/blob/master/images/Ansiblator.png" height="42" width="42"/> </p>
+<p align="center"> <img src="https://github.com/Maheshkrishna/Ansiblator/blob/master/images/Ansiblator.png" height="142" width="142"/> </p>
 <h1 align="center"> Ansiblator v0.0.1 </h1>
 
 Ansiblator, also known as Ansible Generator, is a tool to generate Ansible Playbooks and Roles using user input in Python.
