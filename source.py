@@ -4,7 +4,6 @@ import os
 import requests
 from bs4 import BeautifulSoup
 
-
 final_playbook = '---' + '\n' + '- name: Ansible Playbook' + '\n  hosts: '
 hosts = input("Please enter the host string or IP: ")
 final_playbook += hosts + '\n' + '  become: yes' + '\n' + '  become_user: root' + '\n\n' + '  tasks:\n'
