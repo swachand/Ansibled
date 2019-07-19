@@ -5,7 +5,7 @@ import requests
 import subprocess
 
 
-class Ansiblator:
+class Ansibled:
     """
 
     """
