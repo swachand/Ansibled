@@ -1,1 +1,1 @@
-from .ansiblator import Ansiblator
+from .ansibled import Ansibled
